@@ -1,0 +1,23 @@
+<!--
+      RACCOURCIS QUI GAGNENT DU TEMPS
+
+      CTRL + Z  === Annuler
+      CTRL + C  === Copier
+      CTRL + V  === Coller
+      ALT + Clique === Curseurs multiple
+      CTRL + D === Sélectionne chaque instance
+      CTRL + G === Aller à la ligne ...entrer le numéro
+      CTRL + L === Sélectionne la ligne
+      CTRL + GAUCHE/DROITE === Aller au début/fin du mot
+      CTRL + DEBUT === Aller au début du document
+      CTRL + SHIFT + 1/fin === Aller à la fin du document
+      MAJ + ALT + BAS === Copie/colle la ligne
+      ALT + HAUT/BAS === Bouge la ligne en haut/bas
+      CTRL + / === Commente/décommente la ligne
+      CTRL + : === Comment/décommente la ou les lignes sélectionnées
+      CTRL + K + S === Liste des raccourcis
+      CTRL + ENTER === Commence une nouvelle ligne
+      ALT + GAUCHE/DROITE === Naviguer
+
+      Pour plus de raccourcis : Chercher "printable cheat sheet vscode" sur Google et cliquer sur le 1er lien
+    -->
