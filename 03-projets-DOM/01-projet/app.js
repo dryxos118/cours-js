@@ -12,3 +12,5 @@ btn.addEventListener("click", function () {
 function getRandomNumber() {
   return Math.floor(Math.random() * colors.length);
 }
+
+//*on peut faire ca avec des image il faut juste modifier le backgroungColor par un backgroundColor
