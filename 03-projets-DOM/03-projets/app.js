@@ -29,3 +29,59 @@ const reviews = [
     text: "Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ",
   },
 ];
+
+// const btnN = document.querySelector(".btnN");
+// const btnR = document.querySelector(".btnR");
+// const btnP = document.querySelector(".btnP");
+const btns = document.querySelectorAll(".btn");
+const names = document.querySelector("#name");
+const jobs = document.querySelector("#job");
+const imgs = document.querySelector("#img-person");
+const infos = document.querySelector("#info");
+
+let currentItem = 0;
+
+// console.log(btnN);
+// console.log(btnP);
+// console.log(btnR);
+
+function contenu(person) {
+  const item = reviews[person];
+
+  imgs.src = item.img;
+  names.textContent = item.name;
+  jobs.textContent = item.job;
+  infos.textContent = item.text;
+}
+
+contenu(currentItem);
+
+btns.forEach(function (button) {
+  button.addEventListener("click", function (e) {
+    let oldItem = currentItem;
+
+    if (e.currentTarget.classList.contains("Next")) {
+      currentItem++;
+
+      if (currentItem === reviews.length) {
+        currentItem = 0;
+      }
+    }
+
+    if (e.currentTarget.classList.contains("Prev")) {
+      currentItem--;
+
+      if (currentItem < 0) {
+        currentItem = reviews.length - 1;
+      }
+    }
+
+    if (e.currentTarget.classList.contains("Rand")) {
+      while (currentItem === oldItem) {
+        currentItem = Math.floor(Math.random() * reviews.length);
+      }
+    }
+
+    contenu(currentItem);
+  });
+});

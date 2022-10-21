@@ -1,12 +1,9 @@
+a mettre dans tout les css
+
+```css
 @import url("https://fonts.googleapis.com/css?family=Nunito:400|Roboto:400");
 
 *::before::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -115,79 +112,4 @@ h4 {
 h5 {
   font-size: 1.25rem;
 }
-
-/* partie html*/
-
-main {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  text-align: center;
-}
-
-.container {
-  width: 80vw;
-  max-width: var(--maxWidth);
-}
-
-.souligner {
-  width: 7rem;
-  height: 0.25rem;
-  margin: 0 auto;
-  background: black;
-}
-
-.review {
-  background: var(--white);
-  padding: 1.5rem 2rem;
-  border-radius: var(--borderRadius);
-  box-shadow: var(--shadow-1);
-  text-align: center;
-}
-
-h4 {
-  color: black;
-  font-size: 1rem;
-}
-
-#job {
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  color: var(--primary-500);
-  font-size: 0.85rem;
-}
-
-#info {
-  margin-bottom: 0.5rem;
-  text-transform: capitalize;
-  color: var(--primary-400);
-  font-size: 0.875rem;
-}
-
-.img {
-  position: relative;
-  width: 100px;
-  height: 150px;
-  border-radius: 100%;
-  margin: 0 auto;
-  margin-bottom: 1.5rem;
-}
-
-#img-person {
-  display: block;
-  width: 100px;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  position: relative;
-}
-
-button {
-  cursor: pointer;
-  color: var(--primary-600);
-  padding: 0.5rem;
-}
-
-.btn-random {
-  margin-top: 0.5rem;
-}
+```
