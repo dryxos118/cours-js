@@ -75,6 +75,12 @@ body {
   color: var(--textColor);
 }
 
+.img-bg {
+  background-image: url(./code-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 p {
   margin-bottom: 1rem;
   max-width: 40em;
@@ -128,13 +134,14 @@ main {
 .container {
   width: 80vw;
   max-width: var(--maxWidth);
+  color: hsl(205, 78%, 60%);
 }
 
 .souligner {
   width: 7rem;
   height: 0.25rem;
   margin: 0 auto;
-  background: black;
+  background: hsl(205, 78%, 60%);
 }
 
 .review {
@@ -186,8 +193,10 @@ button {
   cursor: pointer;
   color: var(--primary-600);
   padding: 0.5rem;
+  color: blue;
 }
 
-.btn-random {
+.Rand {
   margin-top: 0.5rem;
+  color: var(--primary-500);
 }
