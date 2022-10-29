@@ -128,9 +128,8 @@ function displayMbtn() {
   filterBtn.forEach(function (btn) {
     btn.addEventListener("click", function (e) {
       const cat = e.currentTarget.textContent;
-      // console.log(cat);
+
       const menuCat = menu.filter(function (itemM) {
-        //   console.log(itemM.category);
         if (itemM.category === cat) {
           return itemM;
         }
