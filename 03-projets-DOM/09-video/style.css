@@ -204,6 +204,6 @@ h1 {
   transition: var(--transition);
 }
 
-.slide {
+.slide .switch {
   left: 50%;
 }
