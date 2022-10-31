@@ -173,3 +173,12 @@ ul {
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   background-size: cover;
 }
+
+@media screen and (min-width: 992px) {
+  .link {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
