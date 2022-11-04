@@ -1,0 +1,32 @@
+/** position: static - par défaut, toujours positionné dans le flow normal */
+
+/** position: relative - position relative à sa position initiale */
+
+/** On utilise top, bottom, left, right pour déplacer l'élément */
+
+/** position: absolue - position relative au parent avec une position: relative  */
+
+/** position: fixed - relative à l'écran, reste quand on scroll */
+/** va utiliser les autres contenus pour remplir l'espace */
+
+div {
+  border: 3px solid red;
+  background: rebeccapurple;
+  margin-top: 40px;
+}
+
+.one {
+  background-color: blue;
+  color: white;
+  position: absolute;
+}
+
+.two {
+  background-color: green;
+  color: white;
+}
+
+.special {
+  background-color: pink;
+  font-size: 20px;
+}
