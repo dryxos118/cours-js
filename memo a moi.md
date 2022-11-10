@@ -53,3 +53,7 @@ pour des images libre de droits
 pour crée un site front gratuit
 
 - https://www.netlify.com/
+
+pour le caveman error 404
+
+-https://codepen.io/nothing4us/pen/ExRgXzJ
