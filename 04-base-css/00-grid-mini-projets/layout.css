@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito:400|Roboto:400");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400");
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400");
 
 *::before::after {
   box-sizing: border-box;
@@ -84,16 +83,22 @@ html {
 } /*16px*/
 
 body {
-  /* background: var(--grey-300); */
-  font-family: var(--bodyFont);
+  background: white;
+  font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   line-height: 1.75;
-  color: var(--textColor);
+  color: #000000;
+  letter-spacing: var(--letterSpacing);
 }
 
 p {
-  margin-bottom: 1rem;
-  max-width: 40em;
+  /* margin-bottom: 1rem; */
+  /* max-width: 40em; */
+  line-height: 2;
+}
+
+a {
+  text-decoration: none;
 }
 
 h1,
@@ -166,4 +171,102 @@ h2 {
   text-transform: capitalize;
   display: inline-block;
   padding: 1rem;
+  filter: drop-shadow(2px 2px 2px white);
+}
+
+.nav-links:hover {
+  color: white;
+  filter: drop-shadow(4px 4px 4px black);
+}
+
+.text {
+  padding: 2rem;
+}
+
+.text p {
+  font-size: 1rem;
+}
+
+.social {
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: var(--orange);
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  color: white;
+}
+
+.icons {
+  cursor: pointer;
+}
+
+.foot {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+  text-transform: capitalize;
+}
+
+.foot p {
+  font-size: 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--orange);
+  margin: 3rem;
+  color: var(--orange);
+  background: white;
+  text-transform: capitalize;
+  text-decoration: none;
+  letter-spacing: var(--letterSpacing);
+  border-radius: var(--borderRadius);
+  transition: var(--transition);
+}
+
+.btn:hover {
+  color: white;
+  background: var(--orange);
+}
+
+@media screen and (min-width: 768px) {
+  .navBar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .main {
+    grid-template-columns: 200px auto 50px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "a a a" "b c d" "e e e";
+  }
+  .head {
+    grid-area: a;
+  }
+
+  .navBar {
+    grid-area: b;
+    grid-template-columns: 1fr;
+    min-height: 100%;
+  }
+
+  .text {
+    grid-area: c;
+  }
+
+  .social {
+    grid-area: d;
+    background-color: #afafaf;
+    grid-template-columns: 1fr;
+  }
+
+  .foot {
+    grid-area: e;
+  }
 }
