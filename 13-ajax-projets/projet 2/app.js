@@ -1,17 +1,22 @@
 const url = "https://api.chucknorris.io/jokes/random";
 const btn = document.querySelector(".btn");
 const result = document.querySelector(".content");
+const img = document.querySelector("img");
 
 const randomJokeChuckNorris = async () => {
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
-    result.textContent = data.value;
-  } catch (error) {
-    console.log(error);
-  }
+  const response = await fetch(url);
+  const data = await response.json();
+  result.textContent = data.value;
+  img.classList.add("shake-img");
+  setTimeout(() => {
+    img.classList.remove("shake-img");
+  }, Math.random() * 1000);
 };
 
 btn.addEventListener("click", () => {
-  randomJokeChuckNorris(url);
+  try {
+    randomJokeChuckNorris(url);
+  } catch (error) {
+    console.log(error);
+  }
 });
