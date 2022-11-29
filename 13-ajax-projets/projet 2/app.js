@@ -16,7 +16,27 @@ const randomJokeChuckNorris = async () => {
 btn.addEventListener("click", () => {
   try {
     randomJokeChuckNorris(url);
+    getData(url);
   } catch (error) {
     console.log(error);
   }
 });
+
+//!plus vielle methode
+
+const getData = (url) => {
+  const xhr = new XMLHttpRequest();
+
+  xhr.open("get", url);
+  xhr.send();
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState !== 4) return;
+    const { value: joke } = JSON.parse(xhr.responseText);
+    console.log(joke);
+    if (xhr.status === 200) {
+    } else {
+      console.log({ status: xhr.status, text: xhr.statusText });
+    }
+  };
+};
