@@ -67,7 +67,7 @@ btn.addEventListener("click", () => {
 
 //   result.textContent = joke;
 // };
-//!plus vielle methode (plus lenght)
+//!plus vielle methode (plus long)
 
 // const getData = (url) => {
 //   const xhr = new XMLHttpRequest();
