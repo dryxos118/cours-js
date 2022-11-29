@@ -3,6 +3,8 @@ const btn = document.querySelector(".btn");
 const result = document.querySelector(".content");
 const img = document.querySelector("img");
 
+//! plus court avec les async await
+
 const randomJokeChuckNorris = async () => {
   const response = await fetch(url);
   const data = await response.json();
@@ -20,23 +22,66 @@ btn.addEventListener("click", () => {
   } catch (error) {
     console.log(error);
   }
+
+  //! ou
+
+  // fetch(url)
+  //   .then((response) => response.json())
+  //   .then((data) => displayData(data))
+  //   .catch((err) => console.log(err));
 });
 
-//!plus vielle methode
+//!avec les promesse (moyen en vitesse)
 
-const getData = (url) => {
-  const xhr = new XMLHttpRequest();
+// btn.addEventListener("click", () => {
+//   getData(url)
+//     .then((response) => displayData(response))
+//     .catch((err) => console.log(err));
+// });
 
-  xhr.open("get", url);
-  xhr.send();
+// const getData = (url) => {
+//   return new Promise((resolve, rejetc) => {
+//     const xhr = new XMLHttpRequest();
 
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState !== 4) return;
-    const { value: joke } = JSON.parse(xhr.responseText);
-    console.log(joke);
-    if (xhr.status === 200) {
-    } else {
-      console.log({ status: xhr.status, text: xhr.statusText });
-    }
-  };
-};
+//     xhr.open("get", url);
+//     xhr.send();
+
+//     xhr.onreadystatechange = function () {
+//       if (xhr.readyState !== 4) return;
+
+//       if (xhr.status === 200) {
+//         resolve(xhr.response);
+//       } else {
+//         rejetc({
+//           status: xhr.status,
+//           text: xhr.statusText,
+//         });
+//       }
+//     };
+//   });
+// };
+
+// const displayData = (data) => {
+//   const { value: joke } = JSON.parse(data);
+//   const random = Math.random() * 1000;
+
+//   result.textContent = joke;
+// };
+//!plus vielle methode (plus lenght)
+
+// const getData = (url) => {
+//   const xhr = new XMLHttpRequest();
+
+//   xhr.open("get", url);
+//   xhr.send();
+
+//   xhr.onreadystatechange = function () {
+//     if (xhr.readyState !== 4) return;
+//     const { value: joke } = JSON.parse(xhr.responseText);
+//     console.log(joke);
+//     if (xhr.status === 200) {
+//     } else {
+//       console.log({ status: xhr.status, text: xhr.statusText });
+//     }
+//   };
+// };
