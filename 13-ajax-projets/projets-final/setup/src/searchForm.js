@@ -14,3 +14,5 @@ form.addEventListener("keyup", (e) => {
   if (!value) return;
   presentDrinks(`${baseUrl}${value}`);
 });
+
+form.addEventListener("submit", (e) => e.preventDefault());

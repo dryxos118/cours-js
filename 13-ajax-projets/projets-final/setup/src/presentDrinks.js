@@ -8,6 +8,7 @@ const showDrinks = async (url) => {
 
   // affiche les cocktails
   displayDrinks(drinks);
+  setDrink(displayDrinks);
 };
 
 export default showDrinks;
